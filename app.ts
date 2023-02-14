@@ -1,8 +1,8 @@
 
 import {AxiosTest} from "./axiosTest.js";
-import {generateData, generateRandom} from "./generator.js";
+import {dataRetainer, generateData, generateRandom} from "./generator.js";
 import {combinator} from "./combinator.js";
-
+import{ mapper}  from "./mappingFunction.js";
 
 
 const stringExample: string = 'cake';
@@ -26,3 +26,11 @@ arrayBtn.addEventListener("click", randomFactory);
 let axioPull =()=> AxiosTest();
 let axioBtn :any = document.getElementById("axioBtn");
 axioBtn.addEventListener("click", axioPull);
+
+
+let mapperDemo = () => mapper(dataRetainer, function(dataSources:any){
+    console.log(dataSources + 1);
+    return dataSources+1;
+});
+let mapperBtn :any = document.getElementById("mapperBtn");
+mapperBtn.addEventListener("click", mapperDemo);

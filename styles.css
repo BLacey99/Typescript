@@ -23,11 +23,40 @@ body{
     font-size:2rem;
 }
 
+#titleContents{
+    background-color:white;
+    max-width:500px;
+    min-width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    min-height:50px;
+    text-align:center;
+    padding:15px;
+    border-radius:15px;
+    outline:5px solid black;
+}
+
+small{
+    font-size:clamp(0.5rem,1rem,50%);
+    font-weight: bolder;
+    text-decoration: underline;
+    color:red;
+}
+
+button{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+}
+
 #ButtonBox{
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, 45%);
     flex-direction:row;
-    width:50%;
+    min-width:50%;
+    max-width:65%;
     flex-wrap:wrap;
     justify-content: center;
     margin-left:auto;
@@ -35,9 +64,10 @@ body{
     margin-top:2%;
     outline:5px solid black;
     border-radius:10px;
-    padding:5px;
-    
-    
+    padding:15px;
+    background-color:rgb(0, 73, 0);
+    gap:15px;
+        
 }
 
 #ButtonBox button{
@@ -50,4 +80,20 @@ body{
 #ButtonBox button:hover{
     background-color:grey;
     cursor:pointer;
+}
+
+#outputBox{
+    background-color:white;
+    max-width:500px;
+    min-width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    min-height:50px;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:15px;
+    border-radius:15px;
+    outline:5px solid black;
 }

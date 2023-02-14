@@ -8,13 +8,14 @@
     <title>TS Experiments</title>
 </head>
 <body>
-    <div id="MainDiv"><h1>Magical Buttons</h1>
-  
+    <div id="MainDiv"><div id="titleContents"><h1>Magical Typescript Buttons</h1>
+        <p>Open the console or look to the bottom of the page to see results of clicks</p>
+        <p>Simple web page for experimenting with concepts and ideas of Typescript</p></div>
     <div id="ButtonBox">
         <button id="combinatorButton" class="combinatorButton">Combinate</button>
-        <button id="GenerateArray">Build Array</button>
+        <button id="GenerateArray">Build Array<small>!!Click me before Mapper Test!!</small></button>
         <button id="axioBtn">Axios Test</button>
-        <button>3</button>
+        <button id="mapperBtn">Mapper Test<small>!!Click Build Array First!!</small></button>
         <button>4</button>
         <button>5</button>
         <button>6</button>
@@ -32,6 +33,8 @@
         <button>18</button>
         <button>19</button>
     </div>
+    <br><br>
+    <div id="outputBox"><h2 id="output">Output goes here!</h2></div>
 </div>
 </body>
 

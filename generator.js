@@ -16,4 +16,4 @@ let generateData = function (generatorCB) {
     console.log(dataRetainer + " Retained values from previous iteration");
     return 1;
 };
-export { generateRandom, generateData };
+export { generateRandom, generateData, dataRetainer };

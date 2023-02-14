@@ -30,4 +30,4 @@ let generateData = function(generatorCB:any): number{
 }
 
 
-export {generateRandom, generateData};
+export {generateRandom, generateData, dataRetainer};
