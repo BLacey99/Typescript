@@ -1,43 +1,28 @@
-const stringExample: string = 'cake';
 
+import {AxiosTest} from "./axiosTest.js";
+import {generateData, generateRandom} from "./generator.js";
+import {combinator} from "./combinator.js";
+
+
+
+const stringExample: string = 'cake';
 const stringCombination: string = 'is a lie';
 
 
-const combinator = (stringEx:string, stringEx2:string) =>{
-    console.log('The ' + stringEx + ' ' + stringEx2);
-}
 
 
-//combinator(stringExample, stringCombination);
-
-let comboBtn : any = document.querySelector("combinatorButton");
-
-comboBtn.addEventListener("click", combinator);
-
-
-let dataDisplay : number[] = [];
+let cake = () => combinator(stringExample, stringCombination);
+let comboBtn : any = document.getElementById("combinatorButton");
+comboBtn.addEventListener("click", cake);
 
 
 
-let generateRandom = function(value:number): number{
-    let generated:number = Math.floor(Math.random() * value);
-    console.log(generated);
-    return generated;
-
-}
-
-let generateData = function(generatorCB:any): number{
-    for(let i:number = 0; i<5; i++){
-        console.log(generatorCB(i));
-        dataDisplay.push(generatorCB(i));
-    }
-    console.log(dataDisplay);
-    return 1;
-}
-
-
-let randomFactory = generateData(generateRandom);
-
-let arrayBtn :any = document.querySelector("GenerateArray");
-
+let randomFactory =()=> generateData(generateRandom);
+let arrayBtn :any = document.getElementById("GenerateArray");
 arrayBtn.addEventListener("click", randomFactory);
+
+
+
+let axioPull =()=> AxiosTest();
+let axioBtn :any = document.getElementById("axioBtn");
+axioBtn.addEventListener("click", axioPull);
