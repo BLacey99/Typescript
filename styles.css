@@ -97,3 +97,13 @@ button{
     border-radius:15px;
     outline:5px solid black;
 }
+
+.inactive{
+    background-color:grey;
+
+}
+
+.inactive:hover{
+    background-color:grey;
+    cursor:not-allowed;
+}

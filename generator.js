@@ -1,3 +1,4 @@
+import { output } from "./outputter.js";
 let dataDisplay = [];
 let dataRetainer;
 let generateRandom = function (value) {
@@ -11,9 +12,11 @@ let generateData = function (generatorCB) {
         dataDisplay.push(generatorCB(i));
     }
     console.log(dataDisplay);
-    dataRetainer = dataDisplay;
-    dataDisplay = [];
+    output.innerHTML = `Current Value: ${dataDisplay} <br> <br> Previous Value: ${dataRetainer}`;
     console.log(dataRetainer + " Retained values from previous iteration");
-    return 1;
+    (function memorizer() {
+        dataRetainer = dataDisplay;
+        dataDisplay = [];
+    })();
 };
 export { generateRandom, generateData, dataRetainer };

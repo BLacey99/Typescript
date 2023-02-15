@@ -1,3 +1,4 @@
+import { output } from "./outputter.js";
 const axios = require('axios');
 const AxiosTest = () => {
     const url = 'https://jsonplaceholder.typicode.com/posts';
@@ -14,6 +15,7 @@ const AxiosTest = () => {
     })
         .then(({ data }) => {
         console.log(data);
+        output.innerHTML = `${JSON.stringify(data)}`;
     });
 };
 export { AxiosTest };

@@ -19,3 +19,4 @@ let mapperDemo = () => mapper(dataRetainer, function (dataSources) {
 });
 let mapperBtn = document.getElementById("mapperBtn");
 mapperBtn.addEventListener("click", mapperDemo);
+mapperBtn.className = 'mapperBtn';

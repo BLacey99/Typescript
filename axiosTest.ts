@@ -1,4 +1,4 @@
-
+import { output } from "./outputter.js";
 
 
 const axios = require('axios');
@@ -20,6 +20,7 @@ const AxiosTest =()=>{
       })
       .then(({data}: {data:number}) => {
         console.log(data);
+        output.innerHTML = `${JSON.stringify(data)}`;
     });
     
 
